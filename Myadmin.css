@@ -1,0 +1,740 @@
+/* ===== TOP PANEL ===== */
+.top-panel {
+    height: 70px;
+    background: var(--panel-bg);
+    border: 1px solid var(--primary-gold);
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+}
+
+/* Left side - Player Info */
+.player-info {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.user-profile-mini {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.user-avatar {
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    color: white;
+    border: 2px solid var(--primary-gold);
+}
+
+.user-details-mini {
+    line-height: 1.3;
+}
+
+.username-mini {
+    font-weight: 700;
+    font-size: 14px;
+    color: #fff;
+}
+
+.user-level {
+    font-size: 10px;
+    color: #aaa;
+}
+
+.balance-box {
+    background: rgba(0,0,0,0.5);
+    padding: 5px 15px;
+    border-radius: 20px;
+    text-align: center;
+    border-left: 2px solid var(--primary-gold);
+    border-right: 2px solid var(--primary-gold);
+}
+
+.balance-box small {
+    font-size: 8px;
+    color: #aaa;
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.balance-amount {
+    font-size: 18px;
+    font-weight: 800;
+    color: var(--primary-gold);
+    text-shadow: 0 0 10px rgba(255,215,0,0.3);
+}
+
+.vip-badge {
+    background: linear-gradient(135deg, #8a6d3b, #5e4b2c);
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    color: gold;
+    border: 1px solid gold;
+}
+
+/* Center - Game Title & Mode Switcher */
+.game-title-section {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.mode-switcher-top {
+    background: rgba(0,0,0,0.4);
+    padding: 5px;
+    border-radius: 8px;
+    border: 1px solid rgba(255,215,0,0.3);
+}
+
+.mode-switcher-top select {
+    background: transparent;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    outline: none;
+}
+
+.mode-switcher-top select option {
+    background: #2a2a4a;
+    color: #fff;
+}
+
+.mode-switcher-top:hover {
+    border-color: var(--primary-gold);
+    box-shadow: 0 0 10px rgba(255,215,0,0.3);
+}
+
+.game-logo {
+    font-size: 22px;
+    font-weight: 900;
+    background: linear-gradient(45deg, gold, white, gold);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.game-logo i {
+    font-size: 20px;
+    color: gold;
+    -webkit-text-fill-color: initial;
+}
+
+/* Right side - Menu Only */
+.top-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.menu-btn {
+    padding: 8px 20px;
+    border-radius: 30px;
+    border: 1px solid rgba(255,255,255,0.2);
+    background: linear-gradient(135deg, #444, #222);
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.2s;
+}
+
+.menu-btn:hover {
+    background: var(--primary-gold);
+    color: black;
+    border-color: var(--primary-gold);
+}
+
+.menu-btn i {
+    font-size: 14px;
+}
+
+/* ===== MOBILE LANDSCAPE OPTIMIZATION ===== */
+@media (orientation: landscape) {
+    .top-panel {
+        height: 55px;
+        padding: 0 10px;
+    }
+    
+    .user-avatar {
+        width: 35px;
+        height: 35px;
+        font-size: 18px;
+    }
+    
+    .username-mini {
+        font-size: 12px;
+    }
+    
+    .user-level {
+        font-size: 9px;
+    }
+    
+    .balance-box {
+        padding: 3px 10px;
+    }
+    
+    .balance-amount {
+        font-size: 16px;
+    }
+    
+    .vip-badge {
+        padding: 3px 8px;
+        font-size: 10px;
+    }
+    
+    .game-logo {
+        font-size: 18px;
+    }
+    
+    .game-logo i {
+        font-size: 16px;
+    }
+    
+    .mode-switcher-top select {
+        font-size: 10px;
+        padding: 3px 6px;
+    }
+    
+    .menu-btn {
+        padding: 5px 15px;
+        font-size: 12px;
+    }
+}
+/* Right side - Full Screen & Menu */
+.top-actions {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.icon-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid rgba(255,255,255,0.2);
+    background: rgba(255,255,255,0.1);
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+}
+
+.icon-btn:hover {
+    background: var(--primary-gold);
+    color: black;
+    border-color: var(--primary-gold);
+    transform: scale(1.05);
+}
+
+.menu-btn {
+    padding: 8px 20px;
+    border-radius: 30px;
+    border: 1px solid rgba(255,255,255,0.2);
+    background: linear-gradient(135deg, #444, #222);
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.2s;
+}
+
+.menu-btn:hover {
+    background: var(--primary-gold);
+    color: black;
+    border-color: var(--primary-gold);
+}
+
+.menu-btn i {
+    font-size: 14px;
+}
+
+/* Mobile Landscape */
+@media (orientation: landscape) {
+    .icon-btn {
+        width: 35px;
+        height: 35px;
+        font-size: 16px;
+    }
+    
+    .menu-btn {
+        padding: 5px 15px;
+        font-size: 12px;
+    }
+}
+
+@media (orientation: landscape) and (max-height: 400px) {
+    .icon-btn {
+        width: 30px;
+        height: 30px;
+        font-size: 14px;
+    }
+    
+    .menu-btn {
+        padding: 4px 12px;
+        font-size: 11px;
+    }
+}
+/* ===== BOTTOM BAR ===== */
+.bottom-bar {
+    height: 80px;
+    background: var(--panel-bg);
+    border: 1px solid var(--primary-gold);
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 -4px 20px rgba(0,0,0,0.5);
+}
+
+/* Bet Control Section */
+.bet-control {
+    flex: 1;
+}
+
+.bet-controls {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(0,0,0,0.3);
+    padding: 5px 10px;
+    border-radius: 50px;
+    border: 1px solid rgba(255,215,0,0.2);
+    width: fit-content;
+}
+
+.bet-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    background: linear-gradient(145deg, #333, #222);
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 3px 0 #111, 0 3px 8px rgba(0,0,0,0.3);
+    transition: all 0.1s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bet-btn:active {
+    transform: translateY(3px);
+    box-shadow: 0 0 0 #111;
+}
+
+.bet-display {
+    min-width: 60px;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 800;
+    color: var(--primary-gold);
+    font-family: 'Courier New', monospace;
+    text-shadow: 0 0 10px rgba(255,215,0,0.5);
+}
+
+/* Bet Select Button Container */
+.bet-btn-container {
+    position: relative;
+}
+
+.bet-select-btn {
+    width: 60px;
+    height: 40px;
+    border-radius: 30px;
+    border: 1px solid var(--primary-gold);
+    background: linear-gradient(145deg, #444, #222);
+    color: var(--primary-gold);
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    transition: all 0.2s;
+}
+
+.bet-select-btn:hover {
+    background: var(--primary-gold);
+    color: black;
+}
+
+.bet-options {
+    position: absolute;
+    bottom: 50px;
+    left: 0;
+    background: #2a2a4a;
+    border: 1px solid var(--primary-gold);
+    border-radius: 10px;
+    padding: 5px;
+    width: 100%;
+    z-index: 100;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+}
+
+.bet-option {
+    padding: 8px 5px;
+    text-align: center;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.2s;
+}
+
+.bet-option:hover {
+    background: var(--primary-gold);
+    color: black;
+}
+
+.bet-option.active {
+    background: var(--primary-gold);
+    color: black;
+    font-weight: 700;
+}
+
+/* Win Display */
+.win-display {
+    text-align: center;
+    background: rgba(0,0,0,0.3);
+    padding: 8px 20px;
+    border-radius: 40px;
+    border: 1px solid var(--accent-green);
+    box-shadow: 0 0 15px rgba(46,213,115,0.3);
+}
+
+.win-label {
+    font-size: 10px;
+    color: var(--text-dim);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.win-amount {
+    font-size: 28px;
+    font-weight: 900;
+    color: var(--accent-green);
+    text-shadow: 0 0 15px var(--accent-green);
+    line-height: 1;
+    font-family: 'Courier New', monospace;
+}
+
+/* Spin Button */
+.spin-btn {
+    width: 120px;
+    height: 60px;
+    border-radius: 40px;
+    border: 3px solid white;
+    background: radial-gradient(circle at 30% 30%, gold, #ff8c00, #cc5500);
+    color: white;
+    font-size: 22px;
+    font-weight: 900;
+    cursor: pointer;
+    box-shadow: 0 0 30px rgba(255,140,0,0.6), 0 5px 15px rgba(0,0,0,0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: all 0.1s;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.spin-btn i {
+    font-size: 20px;
+}
+
+.spin-btn:active {
+    transform: scale(0.95);
+}
+
+.spin-btn:disabled {
+    filter: grayscale(1);
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* ===== MOBILE LANDSCAPE OPTIMIZATION ===== */
+@media (orientation: landscape) {
+    .bottom-bar {
+        height: 70px;
+        padding: 0 15px;
+    }
+    
+    .bet-btn {
+        width: 35px;
+        height: 35px;
+        font-size: 18px;
+    }
+    
+    .bet-display {
+        font-size: 20px;
+        min-width: 50px;
+    }
+    
+    .bet-select-btn {
+        width: 50px;
+        height: 35px;
+        font-size: 14px;
+    }
+    
+    .win-display {
+        padding: 5px 15px;
+    }
+    
+    .win-amount {
+        font-size: 24px;
+    }
+    
+    .spin-btn {
+        width: 100px;
+        height: 50px;
+        font-size: 18px;
+    }
+    
+    .spin-btn i {
+        font-size: 16px;
+    }
+}
+
+@media (orientation: landscape) and (max-height: 400px) {
+    .bottom-bar {
+        height: 60px;
+    }
+    
+    .bet-btn {
+        width: 30px;
+        height: 30px;
+        font-size: 16px;
+    }
+    
+    .bet-display {
+        font-size: 18px;
+    }
+    
+    .win-amount {
+        font-size: 22px;
+    }
+    
+    .spin-btn {
+        width: 90px;
+        height: 45px;
+        font-size: 16px;
+    }
+}
+/* ===== BOTTOM BAR ===== */
+.bottom-bar {
+    height: 80px;
+    background: var(--panel-bg);
+    border: 1px solid var(--primary-gold);
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 -4px 20px rgba(0,0,0,0.5);
+    position: relative;
+}
+
+/* Bet Control Section - Left */
+.bet-control {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.bet-controls {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(0,0,0,0.3);
+    padding: 5px 10px;
+    border-radius: 50px;
+    border: 1px solid rgba(255,215,0,0.2);
+    width: fit-content;
+}
+
+/* Win Display - Center */
+.win-display {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    background: rgba(0,0,0,0.3);
+    padding: 8px 30px;
+    border-radius: 40px;
+    border: 1px solid var(--accent-green);
+    box-shadow: 0 0 15px rgba(46,213,115,0.3);
+    min-width: 120px;
+}
+
+.win-label {
+    font-size: 10px;
+    color: var(--text-dim);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.win-amount {
+    font-size: 28px;
+    font-weight: 900;
+    color: var(--accent-green);
+    text-shadow: 0 0 15px var(--accent-green);
+    line-height: 1;
+    font-family: 'Courier New', monospace;
+}
+
+/* Spin Button - Right */
+.spin-btn {
+    width: 120px;
+    height: 60px;
+    border-radius: 40px;
+    border: 3px solid white;
+    background: radial-gradient(circle at 30% 30%, gold, #ff8c00, #cc5500);
+    color: white;
+    font-size: 22px;
+    font-weight: 900;
+    cursor: pointer;
+    box-shadow: 0 0 30px rgba(255,140,0,0.6), 0 5px 15px rgba(0,0,0,0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: all 0.1s;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-left: auto; /* Push to the right */
+}
+
+.spin-btn i {
+    font-size: 20px;
+}
+
+.spin-btn:active {
+    transform: scale(0.95);
+}
+
+.spin-btn:disabled {
+    filter: grayscale(1);
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* ===== MOBILE LANDSCAPE OPTIMIZATION ===== */
+@media (orientation: landscape) {
+    .bottom-bar {
+        height: 70px;
+        padding: 0 15px;
+    }
+    
+    .bet-btn {
+        width: 35px;
+        height: 35px;
+        font-size: 18px;
+    }
+    
+    .bet-display {
+        font-size: 20px;
+        min-width: 50px;
+    }
+    
+    .bet-select-btn {
+        width: 50px;
+        height: 35px;
+        font-size: 14px;
+    }
+    
+    .win-display {
+        padding: 5px 25px;
+        min-width: 100px;
+    }
+    
+    .win-amount {
+        font-size: 24px;
+    }
+    
+    .spin-btn {
+        width: 100px;
+        height: 50px;
+        font-size: 18px;
+    }
+    
+    .spin-btn i {
+        font-size: 16px;
+    }
+}
+
+@media (orientation: landscape) and (max-height: 400px) {
+    .bottom-bar {
+        height: 60px;
+    }
+    
+    .bet-btn {
+        width: 30px;
+        height: 30px;
+        font-size: 16px;
+    }
+    
+    .bet-display {
+        font-size: 18px;
+    }
+    
+    .win-display {
+        padding: 4px 20px;
+        min-width: 90px;
+    }
+    
+    .win-amount {
+        font-size: 22px;
+    }
+    
+    .spin-btn {
+        width: 90px;
+        height: 45px;
+        font-size: 16px;
+    }
+}
+
+/* For very small screens */
+@media (max-width: 600px) {
+    .win-display {
+        padding: 5px 15px;
+        min-width: 80px;
+    }
+    
+    .win-amount {
+        font-size: 20px;
+    }
+}

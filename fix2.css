@@ -1,0 +1,100 @@
+/* Winning Animation CSS */
+@keyframes winGlow {
+    0% { box-shadow: 0 0 10px #ffd700, 0 0 20px #ffd700, 0 0 30px #ffaa00; }
+    25% { box-shadow: 0 0 20px #00ff00, 0 0 40px #00ff00, 0 0 60px #00aa00; }
+    50% { box-shadow: 0 0 30px #ff00ff, 0 0 60px #ff00ff, 0 0 90px #aa00aa; }
+    75% { box-shadow: 0 0 20px #00ffff, 0 0 40px #00ffff, 0 0 60px #0088aa; }
+    100% { box-shadow: 0 0 10px #ffd700, 0 0 20px #ffd700, 0 0 30px #ffaa00; }
+}
+
+.win-flash {
+    animation: winGlow 1.5s ease-in-out infinite;
+    border: 3px solid gold !important;
+    transform: scale(1.05);
+    z-index: 10;
+    transition: all 0.3s;
+}
+
+@keyframes winPulse {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.2); opacity: 0.8; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+.win-pulse {
+    animation: winPulse 0.6s ease-in-out infinite;
+}
+
+/* ရွှေရောင်အကြွေစေ့တွေ ရွာတဲ့ effect */
+.coin-rain-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 9999;
+}
+
+.coin-rain {
+    position: absolute;
+    font-size: 30px;
+    animation: coinRain linear forwards;
+    text-shadow: 0 0 20px gold, 0 0 40px gold;
+}
+
+@keyframes coinRain {
+    0% { transform: translateY(-10vh) rotate(0deg); opacity: 1; }
+    100% { transform: translateY(110vh) rotate(720deg); opacity: 0; }
+}
+
+/* မီးရှူးတန်း effect */
+.firework {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    animation: firework 1s ease-out forwards;
+}
+
+@keyframes firework {
+    0% { transform: scale(0); opacity: 1; }
+    100% { transform: scale(30); opacity: 0; }
+}
+@keyframes spin3D {
+    0% { transform: rotateX(0deg) rotateY(0deg); }
+    25% { transform: rotateX(180deg) rotateY(90deg); }
+    50% { transform: rotateX(360deg) rotateY(180deg); }
+    75% { transform: rotateX(540deg) rotateY(270deg); }
+    100% { transform: rotateX(720deg) rotateY(360deg); }
+}
+
+.spin-3d {
+    animation: spin3D 2s linear infinite;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+
+@keyframes spinAdvance {
+    0% { transform: translateY(0) scale(1); }
+    25% { transform: translateY(-10px) scale(1.1); }
+    50% { transform: translateY(10px) scale(0.9); }
+    75% { transform: translateY(-5px) scale(1.05); }
+    100% { transform: translateY(0) scale(1); }
+}
+
+.spinning-advanced {
+    animation: spinAdvance 0.3s ease-in-out infinite;
+}
+
+@keyframes bounceStop {
+    0% { transform: scale(1.4) rotate(10deg); }
+    30% { transform: scale(1.2) rotate(-5deg); }
+    70% { transform: scale(1.1) rotate(3deg); }
+    100% { transform: scale(1) rotate(0deg); }
+}
+
+.grid-cell img {
+    transition: all 0.15s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    will-change: transform, filter;
+}
